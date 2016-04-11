@@ -14,8 +14,8 @@ Installation
 
 1. Make sure you have the workDir ow1 in abas
 2. Import the infosystem from the project showcase/infosystem
-2.1 copy the tgz file to the root folder of client
-2.2 extract the tgz file using tar -xf option
-2.3 Import the infosystem using abas ERP and then generate the Java class
+* copy the tgz file to the root folder of client
+* extract the tgz file using tar -xf option
+* Import the infosystem using abas ERP and then generate the Java class
 3. Import the project into client/java and add java/projects/showcase/classes to mandant.classpath
 
