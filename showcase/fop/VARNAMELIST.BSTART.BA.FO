@@ -1,0 +1,66 @@
+..!interpreter english declaration noabbrev englvar
+..!fo2compiler version: 2.0.3, generated: Thu Apr 14 10:54:34 CEST 2016
+.type INT xprocsp  ?      _F|defined(U|xprocsp)
+..<VAR folded>
+..!line VARNAMELIST.BSTART.BA.FO2:4:1:"VAR"
+.type text id ? _F|defined(U|id)
+..</VAR>
+.continue MAIN
+!MAIN
+!PR00000: main
+..!line VARNAMELIST.BSTART.BA.FO2:7:0:"main"
+..<META M|= 'ow1/VARNAMELIST'>
+.formula U|id = M|yvartab^id
+..!line VARNAMELIST.BSTART.BA.FO2:10:3:"CALL checkFieldSelection"
+.formula U|xprocsp = U|xprocsp + 1
+.type text U|xprocst.U|xprocsp          ? _F|defined(U|xprocst.U|xprocsp)
+.formula U|xprocst.U|xprocsp = "PC00000"
+.continue PR00001
+!PC00000: PROCEDURE RETURN 
+..!line VARNAMELIST.BSTART.BA.FO2:10:1:"PROCEDURE RETURN"
+.formula U|xprocsp = U|xprocsp - 1
+.select object 'U|id'
+..<META H|= 'P12:26'> Vartab
+.continue EL00000      ?  _(G|success = G|true)
+.. init table
+.make screen line --
+.. read line
+.select object line
+!WH00000: WHILE
+..!line VARNAMELIST.BSTART.BA.FO2:18:0:"WHILE"
+.continue RE00000    ? _(G|success = G|true)
+.make screen line +O
+.formula M|ytgername = H|varName
+.continue EL00001      ?  _(H|varNameEnglish = "")
+.colour -background  230 130 19 'M|currTabRow'
+.continue EF00001
+!EL00001: ELSE
+!EF00001
+..!line VARNAMELIST.BSTART.BA.FO2:23:0:"END IF/ELSE"
+.formula M|ytengname = H|varNameEnglish
+.formula M|ytistabfield = H|inTab
+.formula M|yintab = H|inTab
+.select object line
+.continue WH00000
+!RE00000: END WHILE
+..!line VARNAMELIST.BSTART.BA.FO2:28:1:"END WHILE"
+.continue EF00000
+!EL00000: ELSE
+..!line VARNAMELIST.BSTART.BA.FO2:30:1:"ELSE"
+.box Error
+An error occured during reading the selected object
+!EF00000
+..!line VARNAMELIST.BSTART.BA.FO2:32:0:"END IF/ELSE"
+.continue END
+!PR00001: checkFieldSelection
+..!line VARNAMELIST.BSTART.BA.FO2:35:0:"checkFieldSelection"
+.continue EL00002      ?  _('U|id' = "(0,0,0)")
+.box No VarTab selected
+Please select a vartab object
+.end
+.continue EF00002
+!EL00002: ELSE
+!EF00002
+..!line VARNAMELIST.BSTART.BA.FO2:40:0:"END IF/ELSE"
+.continue 'U|xprocst.U|xprocsp'
+!END

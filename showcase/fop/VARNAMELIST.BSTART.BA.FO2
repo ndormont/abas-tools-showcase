@@ -1,0 +1,41 @@
+..!interpreter english declaration noabbrev englvar
+
+..<VAR folded>
+.var text id
+..</VAR>
+
+def main() {
+    ..<META M|= 'ow1/VARNAMELIST'>   
+    .formula U|id = M|yvartab^id
+    .call checkFieldSelection()
+    .select object 'U|id'
+    ..<META H|= 'P12:26'> Vartab
+    if(G|success = G|true) {
+        .. init table
+        .make screen line --
+        .. read line
+        .select object line
+        while(G|success = G|true) {
+            .make screen line +O
+            .formula M|ytgername = H|varName
+            if(H|varNameEnglish = "") {
+                .colour -background  230 130 19 'M|currTabRow'
+            }
+            .formula M|ytengname = H|varNameEnglish
+            .formula M|ytistabfield = H|inTab
+            .formula M|yintab = H|inTab
+            .select object line
+        }
+    } else {
+        .box Error
+        .item "An error occured during reading the selected object"
+    }
+}
+
+def checkFieldSelection() {
+    if('U|id' = "(0,0,0)") {
+        .box No VarTab selected
+        .item "Please select a vartab object"
+        .end 
+    }
+}
