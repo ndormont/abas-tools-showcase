@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-04-13T19:42:57 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OW1VARNAMELIST" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b57b8c33-7e6d-443a-a720-56ae4f80dad5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="arb" class="java.lang.String"/>
+	<field name="builtin_company_name1" class="java.lang.String"/>
+	<field name="builtin_layout_name" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="mandant" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="page" class="java.lang.String"/>
+	<field name="such65" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<field name="txtydescription" class="java.lang.String"/>
+	<field name="txtyintab" class="java.lang.String"/>
+	<field name="txtytengname" class="java.lang.String"/>
+	<field name="txtytgername" class="java.lang.String"/>
+	<field name="txtytistabfield" class="java.lang.String"/>
+	<field name="user" class="java.lang.String"/>
+	<field name="ydescription" class="java.lang.String"/>
+	<field name="yintab" class="java.lang.String"/>
+	<field name="ytengname" class="java.lang.String"/>
+	<field name="ytgername" class="java.lang.String"/>
+	<field name="ytistabfield" class="java.lang.String"/>
+	<group name="MaskHeader"/>
+	<group name="TableTitle" isReprintHeaderOnEachPage="true">
+		<groupHeader>
+			<band height="12">
+				<elementGroup>
+					<rectangle>
+						<reportElement positionType="Float" mode="Opaque" x="10" y="0" width="510" height="12" forecolor="#000000" backcolor="#FFFFFF" uuid="a326a0ea-e7b1-47fe-a8ca-7f6153cdc7ee"/>
+						<graphicElement>
+							<pen lineWidth="0.5"/>
+						</graphicElement>
+					</rectangle>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="12" y="0" width="78" height="12" forecolor="#000000" uuid="bf04e6d4-7eb9-471e-96a8-aeae44ade009"/>
+						<box padding="0"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+							<font fontName="Arial" size="7" isBold="true" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{txtytengname}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="120" y="0" width="90" height="12" forecolor="#000000" uuid="b248c73e-6323-4ffc-b47a-d110bd43d004"/>
+						<box padding="0"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+							<font fontName="Arial" size="7" isBold="true" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{txtytgername}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="450" y="0" width="70" height="12" forecolor="#000000" uuid="db9623b9-c258-411a-b807-c65bf4321e1b"/>
+						<box padding="0"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+							<font fontName="Arial" size="7" isBold="true" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{txtytistabfield}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="EvenGroup">
+		<groupExpression><![CDATA[$V{REPORT_COUNT}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<printWhenExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 1 ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				<elementGroup>
+					<rectangle>
+						<reportElement positionType="Float" mode="Opaque" x="10" y="0" width="510" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="cee309c5-1a47-4811-824b-797237db3c9c"/>
+						<graphicElement>
+							<pen lineWidth="0.5"/>
+						</graphicElement>
+					</rectangle>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="12" y="0" width="78" height="12" forecolor="#000000" uuid="2c16a3cf-be6f-402f-a0c1-f2d4163805e4"/>
+						<box padding="0"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+							<font fontName="Arial" size="7" isBold="false" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{ytengname}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="119" y="1" width="91" height="12" forecolor="#000000" uuid="03bfb3ff-46a1-4834-a470-45ead0d16ffe"/>
+						<box padding="0"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+							<font fontName="Arial" size="7" isBold="false" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{ytgername}]]></textFieldExpression>
+					</textField>
+					<textField isBlankWhenNull="true">
+						<reportElement positionType="Float" mode="Transparent" x="450" y="1" width="70" height="12" forecolor="#000000" uuid="c8808702-1cee-4eb5-a008-81062c991e2f"/>
+						<box padding="0"/>
+						<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+							<font fontName="Arial" size="7" isBold="false" isItalic="false" isUnderline="false"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{yintab}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="OddGroup">
+		<groupExpression><![CDATA[$V{REPORT_COUNT}]]></groupExpression>
+		<groupHeader>
+			<band height="13">
+				<printWhenExpression><![CDATA[$V{REPORT_COUNT}.intValue() % 2 == 0 ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				<elementGroup/>
+				<rectangle>
+					<reportElement positionType="Float" mode="Opaque" x="10" y="0" width="510" height="13" forecolor="#000000" backcolor="#CCCCCC" uuid="aab9d918-2c28-49d9-8710-79769795b515"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" mode="Transparent" x="12" y="0" width="78" height="12" forecolor="#000000" uuid="4568dadd-8f97-4602-8676-cbdd1330a286"/>
+					<box padding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="7" isBold="false" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ytengname}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" mode="Transparent" x="119" y="1" width="91" height="12" forecolor="#000000" uuid="8558c35e-9515-46f2-ab92-fd084d0847e9"/>
+					<box padding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="7" isBold="false" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ytgername}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement positionType="Float" mode="Transparent" x="450" y="1" width="70" height="12" forecolor="#000000" uuid="70a7c4a5-5739-4089-aa26-8a7d68e6bd0c"/>
+					<box padding="0"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="7" isBold="false" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{yintab}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="57">
+			<elementGroup>
+				<textField isBlankWhenNull="true">
+					<reportElement mode="Transparent" x="210" y="0" width="250" height="19" forecolor="#000000" uuid="d750811d-5c57-45ee-86c2-85c74efad552"/>
+					<box padding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Arial" size="14" isBold="true" isItalic="false" isUnderline="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Report: " +$F{such65}]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+		</band>
+	</title>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<lastPageFooter>
+		<band/>
+	</lastPageFooter>
+</jasperReport>
