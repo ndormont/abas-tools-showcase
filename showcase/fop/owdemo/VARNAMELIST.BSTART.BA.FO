@@ -1,0 +1,87 @@
+..!interpreter english declaration noabbrev englvar
+..!fo2compiler version: 2.0.2, generated: Tue Apr 12 17:09:21 EDT 2016
+.type INT xprocsp
+..============================================================================
+..  Author             : bf
+..  Date of Creation   : 11.04.2016
+..  Name               : ow1/VARNAMELIST.BSTART.BA.FO2
+..  Path/Pfad          :
+..  Function           :
+..  include-easy  spx/ow
+..  required Paths    :
+..  Menu Items        :
+..  Mask Priority
+..  for EFOP           :
+..  Starting Ticket    :
+..                     History of Changes
+..                     ==================
+.. Ticket of Change    :
+..
+..============================================================================
+..
+..<VAR folded>
+.type text id ?  F|defined(U|id) = G|false
+.type text db ?  F|defined(U|db) = G|false
+.type text group ?  F|defined(U|group) = G|false
+.type text criteria ?  F|defined(U|criteria) = G|false
+..</VAR>
+..
+.continue MAIN
+!MAIN
+!PR00000: main
+..!line VARNAMELIST.BSTART.BA.FO2:29:0:"main"
+.input "is/FARBEN.DEF"
+.. M-buffer initialized with Infosystem VARNAMELIST
+..<META M|= 'ow1/VARNAMELIST'>
+.formula U|id = M|yvartab^id
+..!line VARNAMELIST.BSTART.BA.FO2:34:3:"CALL checkFieldSelection"
+.formula U|xprocsp = U|xprocsp + 1
+.type text U|xprocst.U|xprocsp          ? _F|defined(U|xprocst.U|xprocsp)
+.formula U|xprocst.U|xprocsp = "PC00000"
+.continue PR00001
+!PC00000: PROCEDURE RETURN 
+..!line VARNAMELIST.BSTART.BA.FO2:34:1:"PROCEDURE RETURN"
+.formula U|xprocsp = U|xprocsp - 1
+.select object 'U|id'
+.. H-buffer, initialized with vartab
+..<META H|= 'P12:26'>
+.continue EL00000      ?  _(G|success = G|true)
+.. Clearing table section
+.make screen line --
+.. Read line
+.select object line
+!WH00000: WHILE
+..!line VARNAMELIST.BSTART.BA.FO2:43:0:"WHILE"
+.continue RE00000    ? _(G|success = G|true)
+.make screen line +O
+.formula M|ytgername = H|varName
+.continue EL00001      ?  _(H|varNameEnglish = "")
+.colour -background 230 130 19 'M|currTabRow'
+.continue EF00001
+!EL00001: ELSE
+!EF00001
+..!line VARNAMELIST.BSTART.BA.FO2:48:0:"END IF/ELSE"
+.formula M|ytengname = H|varNameEnglish
+.formula M|ytistabfield = H|inTab
+.select object line
+.continue WH00000
+!RE00000: END WHILE
+..!line VARNAMELIST.BSTART.BA.FO2:52:1:"END WHILE"
+.continue EF00000
+!EL00000: ELSE
+..!line VARNAMELIST.BSTART.BA.FO2:54:1:"ELSE"
+.println Dataset not read
+!EF00000
+..!line VARNAMELIST.BSTART.BA.FO2:55:0:"END IF/ELSE"
+.continue END
+!PR00001: checkFieldSelection
+..!line VARNAMELIST.BSTART.BA.FO2:58:0:"checkFieldSelection"
+.continue EL00002      ?  _('U|id' = "(0,0,0)")
+.println No VarTab selected
+.end
+.continue EF00002
+!EL00002: ELSE
+!EF00002
+..!line VARNAMELIST.BSTART.BA.FO2:62:0:"END IF/ELSE"
+.continue 'U|xprocst.U|xprocsp'
+!END
